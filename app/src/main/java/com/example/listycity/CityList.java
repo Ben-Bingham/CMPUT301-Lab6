@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * This is a class that keeps track of a list of city objects
- * @version 1.0
+ * @version 2.0
  */
 public class CityList {
     private List<City> cities = new ArrayList<>();
@@ -32,5 +32,28 @@ public class CityList {
         List<City> list = cities;
         Collections.sort(list);
         return list;
+    }
+
+    /**
+     * This says whether or not the given city is already in the list.
+     * @param city The city to check.
+     * @return True if the list contains the city, false otherwise.
+     * @since 2.0
+     */
+    public boolean hasCity(City city) {
+        return cities.contains(city);
+    }
+
+    /**
+     * Removes the given city from the list.
+     * @param city The city to remove from the list.
+     * @since 2.0
+     */
+    public void delete(City city) {
+        if (hasCity(city)) {
+            throw new IllegalArgumentException();
+        }
+
+        cities.remove(city);
     }
 }
