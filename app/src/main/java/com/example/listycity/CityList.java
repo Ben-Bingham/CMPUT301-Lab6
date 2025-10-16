@@ -50,7 +50,7 @@ public class CityList {
      * @since 2.0
      */
     public void delete(City city) {
-        if (hasCity(city)) {
+        if (!hasCity(city)) {
             throw new IllegalArgumentException();
         }
 
