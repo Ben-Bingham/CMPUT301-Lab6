@@ -2,11 +2,9 @@ package com.example.listycity;
 
 /**
  * Defines a City, and its province.
- * @author Benjamin Bingham
  * @version 1.0
- *
  */
-public class City {
+public class City implements Comparable {
     /**
      * The name of the city.
      */
@@ -44,5 +42,17 @@ public class City {
     String getProvinceName(){
         return this.province;
     }
+
+    /**
+     * Compares the current object to the object o
+     * @param o the object to be compared.
+     * @return
+     */
+    @Override
+    public int compareTo(Object o) {
+        City city = (City) o;
+        return this.city.compareTo(city.getCityName()); // this.city refers to the city name
+    }
+
 }
 
