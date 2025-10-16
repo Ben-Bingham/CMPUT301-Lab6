@@ -7,7 +7,13 @@ package com.example.listycity;
  *
  */
 public class City {
+    /**
+     * The name of the city.
+     */
     private String city;
+    /**
+     * The name of the province the city is in.
+     */
     private String province;
 
     /**
